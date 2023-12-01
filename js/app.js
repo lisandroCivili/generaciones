@@ -96,24 +96,22 @@ class Person{
     mostrarGeneracion(){
 
         if (this.birth > 1993 && this.birth < 2011) {
-            alert(`${this.name} pertenece a la Generacion Z
-                                Su rasgo caracteristico es la Irreverencia</strong>.<br>`);
+            alert(`${this.name} pertenece a la Generacion Z\nSu rasgo caracteristico es la Irreverencia.\n`);
         }
         if (this.birth > 1980 && this.birth < 1994) {
-            alert(`${this.name} pertenece a la Generacion Y
-                                Su rasgo caracteristico es la Frustración</strong>.<br>`);
+            alert(`${this.name} pertenece a la Generacion Y\nSu rasgo caracteristico es la Frustración.\n`);
         }
         if (this.birth > 1968 && this.birth < 1981) {
-            alert(`${this.name} pertenece a la Generacion X
-                                Su rasgo caracteristico es la Obsesión por el éxito</strong>.<br>`);
+            alert(`${this.name} pertenece a la Generacion X\nSu rasgo caracteristico es la Obsesión por el éxito.\n`);
         }
         if (this.birth > 1948 && this.birth < 1969) {
-            alert(`${this.name} pertenece a la generación Baby Boom
-                                Su rasgo caracteristico es la Ambición</strong>.<br>`);
+            alert(`${this.name} pertenece a la generación Baby Boom\nSu rasgo caracteristico es la Ambición.\n`);
         }
         if (this.birth > 1929 && this.birth < 1949) {
-            alert(`${this.name} pertenece a la Silent Generation (niños posguerra)
-                                Su rasgo caracteristico es la Austeridad</strong>.<br>`);
+            alert(`${this.name} pertenece a la Silent Generation (niños posguerra)\nSu rasgo caracteristico es la Austeridad.\n`);
+        }
+        if (this.birth < 1994 || this.birth > 2010) {
+            alert("No existe un identificador generacional para el año ingresado");
         }
        
     }
@@ -138,10 +136,10 @@ class Person{
         liSexo.innerHTML = `<b>Sexo:</b> ${this.gender}`;
 
         const liPeso = document.createElement('li');
-        liPeso.innerHTML = `<b>Peso:</b> ${this.weight}`;
+        liPeso.innerHTML = `<b>Peso:</b> ${this.weight}kg`;
 
         const liAltura = document.createElement('li');
-        liAltura.innerHTML = `<b>Altura:</b> ${this.height}`;
+        liAltura.innerHTML = `<b>Altura:</b> ${this.height}m`;
 
         const liNacimiento = document.createElement('li');
         liNacimiento.innerHTML = `<b>Año de nacimiento:</b> ${this.birth}`;
