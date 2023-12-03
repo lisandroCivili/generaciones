@@ -124,24 +124,31 @@ class Person{
     }
     mostrarDatos(){
         const liNombre = document.createElement('li');
+        liNombre.className = 'list-group-item fs-5';
         liNombre.innerHTML = `<b>Nombre y apellido:</b> ${this.name}`;
 
         const liEdad = document.createElement('li');
+        liEdad.className = 'list-group-item fs-5';
         liEdad.innerHTML = `<b>Edad:</b> ${this.age}`;
 
         const liDNI = document.createElement('li');
+        liDNI.className = 'list-group-item fs-5';
         liDNI.innerHTML = `<b>D.N.I:</b> ${this.id}`;
 
         const liSexo = document.createElement('li');
+        liSexo.className = 'list-group-item fs-5';
         liSexo.innerHTML = `<b>Sexo:</b> ${this.gender}`;
 
         const liPeso = document.createElement('li');
+        liPeso.className = 'list-group-item fs-5';
         liPeso.innerHTML = `<b>Peso:</b> ${this.weight}kg`;
 
         const liAltura = document.createElement('li');
+        liAltura.className = 'list-group-item fs-5';
         liAltura.innerHTML = `<b>Altura:</b> ${this.height}m`;
 
         const liNacimiento = document.createElement('li');
+        liNacimiento.className = 'list-group-item fs-5';
         liNacimiento.innerHTML = `<b>Año de nacimiento:</b> ${this.birth}`;
 
         const ulList = document.querySelector('ul');
@@ -157,7 +164,7 @@ class Person{
 
 }
 
-const obtenerDatos = (e) =>{
+const getData = (e) =>{
     e.preventDefault();
     const inputName = document.getElementById('inputName');
     const inputAge = document.getElementById('inputAge');
@@ -189,7 +196,7 @@ const formData = document.getElementById('formData');
 const sectionData = document.getElementById('sectionData');
 const btnGeneration = document.getElementById('btnGeneration');
 const btnAdultOrNot = document.getElementById('btnAdultOrNot');
-formData.addEventListener('submit', obtenerDatos);
+formData.addEventListener('submit', getData);
 btnGeneration.addEventListener('click', generation);  
 btnAdultOrNot.addEventListener('click', adultOrNot);  
 const persona = new Person();
